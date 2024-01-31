@@ -1,0 +1,29 @@
+<div class="wizard-container">
+    <div class="step-icons">
+      <div *ngFor="let step of steps; let i = index" [ngClass]="{ 'selected': currentStep === i }" (click)="goToStep(i)">
+        <!-- Use ng-content to project different steps -->
+        <ng-container *ngIf="currentStep === i">
+          <ng-content select="[stepContent]"></ng-content>
+        </ng-container>
+        <i *ngIf="currentStep === i" [ngClass]="getStepIconClass(i)"></i>
+      </div>
+    </div>
+  
+    <div class="step-info">
+      <h2 *ngIf="currentStep !== steps.length - 1">Step {{ currentStep + 1 }}</h2>
+      <p *ngIf="currentStep !== steps.length - 1">{{ stepInfo[currentStep] }}</p>
+    </div>
+  
+    <div *ngIf="currentStep === steps.length - 1" class="completion-info">
+      <h3>Completed</h3>
+      <p>You have successfully completed all steps</p>
+    </div>
+  
+    <div class="step-actions">
+      <button *ngIf="currentStep !== 0" (click)="goToPrevious()">Previous</button>
+      <button *ngIf="currentStep === steps.length - 2" (click)="skipStep()">Skip</button>
+      <button *ngIf="currentStep !== steps.length - 1" (click)="saveAndContinue()">Save and Continue</button>
+      
+    </div>
+  </div>
+  
