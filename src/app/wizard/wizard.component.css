@@ -3,14 +3,15 @@
     flex-direction: column;
     align-items: center;
     margin: 20px;
-  }
-  
-  .step-icons {
+    background-color: y;
+}
+
+.step-icons {
     display: flex;
     margin-bottom: 20px;
-  }
-  
-  .step-icons div {
+}
+
+.step-icons div {
     width: 50px;
     height: 50px;
     margin: 0 10px;
@@ -20,26 +21,30 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-  }
-  
-  .step-icons div.selected {
+    color: black;
+}
+
+.step-icons div.selected {
     background-color: #3498db;
     color: white;
-  }
-  
-  .step-info {
+}
+
+.step-info {
     text-align: center;
     margin-bottom: 20px;
-  }
-  
-  .step-actions button {
+}
+
+.step-actions button {
     margin: 0 10px;
     padding: 10px;
     cursor: pointer;
-  }
-  
-  .completion-info {
+    background-color: #3498db;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.completion-info {
     margin-top: 20px;
     text-align: center;
-  }
-  
+}

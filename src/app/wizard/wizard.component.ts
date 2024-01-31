@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./wizard.component.css']
 })
 export class WizardComponent implements OnInit {
-  steps = Array(4).fill(0).map((_, index) => index); // Array of step indices
+  steps = Array(4).fill(0).map((_, index) => index);
   currentStep = 0;
   stepInfo = [
     'This is step 1',
@@ -46,7 +46,7 @@ export class WizardComponent implements OnInit {
     const iconClasses = [
       'fa-folder-open',
       'fa-pencil',
-      'fa-picture',
+      'fa-image',
       'fa-check'
     ];
   
